@@ -10,7 +10,7 @@ import RealityKit
 
 struct ContentView : View {
     @StateObject private var viewModel = FurnitureViewModel()
-    let furnitures: [Furniture] = [.chair, .desk]
+    let furnitures: [Furniture] = [.chair, .desk, .stool]
     
     var body: some View {
         VStack {
@@ -24,7 +24,6 @@ struct ContentView : View {
                             .border(.black, width: viewModel.selectedFurniture == name ? 1.0 : 0.0)
                             .onTapGesture {
                                 viewModel.selectedFurniture = name
-                                print(viewModel.selectedFurniture)
                             }
                     }
                 }
